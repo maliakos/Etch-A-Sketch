@@ -1,0 +1,11 @@
+p {
+  font-size: 2em;
+  font-weight: 700;
+  color: #121212;
+  background: red; }
+
+.bezels {
+  background: #121212;
+  border: 1px solid red;
+  width: 100vw;
+  height: 100vh; }
