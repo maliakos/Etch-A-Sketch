@@ -1,3 +1,11 @@
+:root {
+  font-size: 12px;
+  --paintit-base: #f3e9ee;
+  --paintit-base-darker: #f77fbe;
+  --paintit-accent: #b7ab9f;
+  --paintit-dark: #121212;
+  --paintit-text: #f7f7f7; }
+
 html {
   box-sizing: border-box; }
 
@@ -7,48 +15,149 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-family: "Alfa Slab One", cursive;
-  background: yellow; }
+  margin: 0;
+  font-family: "Patua One", cursive;
+  background: var(--paintit-base); }
 
 .bezels {
-  background: yellow;
-  padding: 30px;
+  background: var(--paintit-base);
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: space-around; }
-
-.drawing-container {
-  align-self: center;
-  background: #121212;
-  width: 800px;
-  height: 800px;
-  display: grid; }
-  .drawing-container div {
-    background: black;
-    border: 1px solid white; }
-  .drawing-container .paint-it-yellow {
-    background: yellow; }
-
-.dashboard {
-  color: white;
-  align-self: center;
-  background: #121212;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  border-radius: 10px; }
-  .dashboard h1 {
-    font-size: 30px;
-    font-weight: 100; }
-  .dashboard label {
-    font-size: 20px;
-    margin: 10px auto; }
-  .dashboard button {
-    margin: 10px auto;
-    width: 40%;
-    color: red;
+  justify-content: center;
+  align-items: center; }
+  .bezels .main-title {
+    margin-bottom: 4rem; }
+    .bezels .main-title h1 {
+      margin: 0;
+      font-size: 4em; }
+    .bezels .main-title span {
+      color: var(--paintit-base-accent);
+      display: block;
+      font-size: 1em;
+      margin-top: -0.8rem; }
+  .bezels .drawing-container {
     background: #121212;
-    font-size: 20px;
+    box-shadow: 0 0 5px 10px var(--paintit-accent);
+    width: 60%;
+    min-width: 25rem;
+    aspect-ratio: 1;
+    display: grid; }
+    .bezels .drawing-container div {
+      background: black; }
+    .bezels .drawing-container .paint-it {
+      background: var(--paintit-base); }
+  .bezels .dashboard {
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 0 5px 10px var(--paintit-accent);
+    font-size: 1rem;
+    background: #121212;
+    width: 60%;
+    min-width: 20rem;
+    color: white;
+    white-space: nowrap;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
     font-weight: 500; }
+    .bezels .dashboard input {
+      display: block;
+      margin: auto; }
+    .bezels .dashboard .wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem; }
+      .bezels .dashboard .wrapper input {
+        display: inline;
+        margin: 0.4rem 0; }
+      .bezels .dashboard .wrapper span {
+        font-size: 0.5em; }
+      .bezels .dashboard .wrapper label {
+        font-size: 1em;
+        margin-right: 0.5rem; }
+    .bezels .dashboard button {
+      width: 40%;
+      color: black;
+      background: white;
+      font-size: 1em;
+      font-weight: 500;
+      grid-area: button;
+      margin-top: 1.5rem; }
+    .bezels .dashboard a {
+      fill: black;
+      position: absolute;
+      top: 0.5em;
+      right: 0.5em;
+      width: 2em;
+      height: 2em; }
+      .bezels .dashboard a svg {
+        transition: all 0.2s ease-in-out; }
+
+@media (min-width: 576px) {
+  .wrapper input {
+    display: inline;
+    margin-right: 0.2rem; } }
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 12px; }
+    :root .bezels {
+      margin-top: 10rem;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem; }
+      :root .bezels .main-title {
+        position: absolute;
+        top: 2rem;
+        margin: auto; }
+      :root .bezels .drawing-container {
+        width: 60%;
+        max-width: 30rem; }
+      :root .bezels .dashboard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        width: 30%;
+        max-width: 450px;
+        min-width: min-content;
+        padding: 1rem 2rem;
+        margin: 0; }
+        :root .bezels .dashboard input[type="number"] {
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top: 0.5rem;
+          margin-bottom: 1.5rem; }
+        :root .bezels .dashboard .wrapper {
+          display: block; }
+          :root .bezels .dashboard .wrapper .input_group {
+            margin-top: 1rem;
+            align-self: flex-start;
+            display: block; }
+          :root .bezels .dashboard .wrapper .input_group:first-of-type {
+            margin: 0;
+            align-self: center; } }
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 16px; }
+    :root .drawing-container {
+      width: 60%;
+      max-width: 40rem; }
+    :root .dashboard {
+      width: 20%;
+      max-width: 10rem; }
+      :root .dashboard button:hover {
+        background: white;
+        border: 1px solid #793030;
+        color: black; }
+      :root .dashboard a:hover > svg {
+        transform: scale(1.3); } }
