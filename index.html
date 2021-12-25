@@ -24,18 +24,18 @@
         <label for="squares_number">Board Size <span>(squares/side)</span></label>
         <input type="number" name="squares_number" min="10" max="100" id="squares_number" placeholder="10-100" />
       </div>
-      <div class="input_group">
-        <label for="darken_mode">Darken Mode</label>
-        <input type="checkbox" id="darken_mode" value="darken_mode" />
-      </div>
       <div class="wrapper">
         <div class="input_group">
           <input type="radio" name="colour_mode" id="black_white_mode" value="black_white_mode" checked />
-          <label for="black-white">Black/White Mode</label>
+          <label for="black_white_mode">Black/White Mode</label>
         </div>
         <div class="input_group">
           <input type="radio" name="colour_mode" id="rainbow_mode" value="rainbow_mode" />
           <label for="rainbow_mode">Or Colours!</label>
+        </div>
+        <div class="input_group">
+          <input type="radio" name="colour_mode" id="darken_mode" value="darken_mode" />
+          <label for="darken_mode">Darken Mode</label>
         </div>
       </div>
       <button id="submit" type="button">Submit</button>

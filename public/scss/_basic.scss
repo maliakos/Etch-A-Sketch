@@ -1,10 +1,10 @@
 :root {
   font-size: 12px;
-  --paintit-base: #f3e9ee;
-  --paintit-base-darker: #f77fbe;
-  --paintit-accent: #b7ab9f;
-  --paintit-dark: #121212;
-  --paintit-text: #f7f7f7;
+  --paintit-base: hsl(330, 29%, 93%);
+  --paintit-base-darker: hsl(329, 88%, 73%);
+  --paintit-accent: hsl(30, 14%, 67%);
+  --paintit-dark: hsl(0, 0%, 7%);
+  --paintit-text: hsl(0, 0%, 100%);
 }
 html {
   box-sizing: border-box;
@@ -72,10 +72,6 @@ body {
     align-items: center;
     font-size: 1.5em;
     font-weight: 500;
-    input {
-      display: block;
-      margin: auto;
-    }
     .wrapper {
       display: flex;
       flex-direction: column;
